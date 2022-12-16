@@ -1,16 +1,15 @@
 #include "main.h"
 /**
- * print_alphabet - function to print letters of the alphabet.
- *
- * Return: Always 0.
- */
+  * _isdigit - function to check if a value is a digit.
+  * @c: value being tested.
+  * Return: 1 for digit, otherwise 0 .
+  */
 
-void print_alphabet(void)
+int _isdigit(int c)
 {
-char alphabet;
-for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
+if (c >= 48 && c <= 57)
 {
-_putchar(alphabet);
+return (1);
 }
-_putchar('\n');
+return (0);
 }

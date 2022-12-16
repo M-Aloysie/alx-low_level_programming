@@ -1,16 +1,30 @@
+
 #include "main.h"
 /**
- * print_last_digit - function that prints the last digit of a number.
- * @n: value being tested.
+ * print_diagonal - function that draws a diagonal line on the terminal.
+ * @n: number of times a character should be printed.
  * Return: Always 0
  */
 
-int print_last_digit(int n)
+void print_diagonal(int n)
 {
-n = n % 10;
+int x, y;
 
-if (n < 0)
-n = -n;
-_putchar(n + '0');
-return (n);
+if (n <= 0)
+{
+_putchar('\n');
+}
+else
+{
+for (x = 0; x < n; x++)
+{
+for (y = 0; y < x; y++)
+{
+_putchar(32);
+}
+
+_putchar(92);
+_putchar('\n');
+}
+}
 }

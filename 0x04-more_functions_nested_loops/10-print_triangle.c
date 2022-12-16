@@ -1,12 +1,33 @@
 #include "main.h"
 /**
- * add - function that adds two integers and returns the result.
- * @x: first value for addition.
- * @y: second value for adition.
+ * print_triangle - function that prints a triangle.
+ * @size: size of the triangle.
  * Return: Always 0
  */
 
-int add(int x, int y)
+void print_triangle(int size)
 {
-return (x + y);
+int x, y, z;
+
+if (size <= 0)
+{
+_putchar('\n');
+}
+else
+{
+for (x = 0; x < size; x++)
+{
+for (y = size - x; y > 1; y--)
+{
+_putchar(32);
+}
+
+for (z = 0; z <= x; z++)
+{
+_putchar(35);
+}
+
+_putchar('\n');
+}
+}
 }

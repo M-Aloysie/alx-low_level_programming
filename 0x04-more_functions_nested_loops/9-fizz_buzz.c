@@ -1,38 +1,39 @@
-#include "main.h"
+#include <stdio.h>
 /**
- * times_table - function that prints 9 times table starting with 0.
+ * main - main block.
  * Return: Always 0
  */
 
-void times_table(void)
+int main(void)
 {
-int x, y, product;
+int x;
 
-for (x = 0; x <= 9; x++)
+for (x = 1; x <= 100; x++)
 {
-for (y = 0; y <= 9; y++)
+if ((x % 3 == 0) && (x % 5 == 0))
 {
-product = x * y;
-if (y != 0)
+printf("FizzBuzz");
+}
+else if (x % 3 == 0)
 {
-_putchar(',');
-_putchar(' ');
+printf("Fizz");
 }
-if (y == 0)
+else if (x % 5 == 0)
 {
-_putchar('0');
+printf("Buzz");
 }
-else if (product >= 10)
+else
 {
-_putchar((product / 10) + '0');
-_putchar((product % 10) + '0');
+printf("%d", x);
 }
-else if ((product < 10) && (y != 0))
+
+if (x != 100)
 {
-_putchar(' ');
-_putchar((product % 10) + '0');
+printf(" ");
 }
 }
-_putchar('\n');
-}
+
+printf("\n");
+
+return (0);
 }
