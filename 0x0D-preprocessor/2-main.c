@@ -5,6 +5,8 @@
  * Return: Always 0.
  */
 
-#define ABS(x) ((x) < (0) ? ((x) * (-1)) : (x))
-
-#endif
+int main(void)
+{
+	printf("%s\n", __FILE__);
+	return (0);
+}
